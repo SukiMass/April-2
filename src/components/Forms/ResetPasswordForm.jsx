@@ -5,10 +5,12 @@ import InputGroup from "../Input/InputGroup";
 import Input from "../Input/Input";
 import { PiEnvelopeSimpleOpenThin } from "react-icons/pi";
 import { useNavigate } from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const ResetPasswordForm = () => {
   const pageNavigate = useNavigate();
-  const [email,setEmail] = useState('')
+  const [email, setEmail] = useState('')
   const [errors, setErrors] = useState({});
 
   const handlekeydown = (e) => {
@@ -24,7 +26,7 @@ const ResetPasswordForm = () => {
     setErrors({})
     let newErrors = {};
 
-    if(!email){
+    if (!email) {
       newErrors.email = "Email is required."
     } else if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) {
       newErrors.email = 'Invalid email format.';
@@ -32,7 +34,10 @@ const ResetPasswordForm = () => {
 
 
     if (Object.keys(newErrors).length === 0) {
-      pageNavigate("/reset-password");
+      toast.success('Change Password link has been sent to your email')
+      setTimeout(() => {
+        pageNavigate("/reset-password")
+      }, 3000)
     } else {
       setErrors(newErrors);
     }
@@ -43,7 +48,7 @@ const ResetPasswordForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      
+
       <div className="input-group mb-3 login-form">
         <InputGroup
           className="login-input-group-text input-group-text border border-0"
@@ -57,7 +62,7 @@ const ResetPasswordForm = () => {
           ariaLabel="email"
           testId="reset-email"
           name="email_id"
-          functionOnchange={(e)=>setEmail(e.target.value)}
+          functionOnchange={(e) => setEmail(e.target.value)}
           functionOnkeyDown={handlekeydown}
         />
         {errors.email && <Label className="py-2 text-danger col-12" title={errors.email} />}
@@ -70,6 +75,7 @@ const ResetPasswordForm = () => {
           buttonType="submit"
           testId="reset-button"
         />
+        <Toaster position="top-right" />
       </div>
     </form>
   );

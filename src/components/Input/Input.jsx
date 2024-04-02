@@ -1,7 +1,7 @@
 import React  from 'react'   
 import FormStateBlur from '../Forms/FormStateBlur'
 
-const Input = ({type,className, placeHolder, ariaLabel, testId, required, name, functionOnchange, functionOnkeyDown, disabled,pattern,role,alt,value}) => {
+const Input = ({type,className, placeHolder,formFieldName, ariaLabel, testId, required, name, functionOnchange, functionOnkeyDown, disabled, pattern,role,alt,value}) => {
 
   const {
     unfocused, 
@@ -11,7 +11,8 @@ const Input = ({type,className, placeHolder, ariaLabel, testId, required, name, 
  
 
   return (
-    <input
+    <>
+     <input
     type={type}
     className={className}
     placeholder={placeHolder}
@@ -26,11 +27,15 @@ const Input = ({type,className, placeHolder, ariaLabel, testId, required, name, 
     role={role}
     alt={alt}  
     value={value}
-    
     onBlur={handleUnfocused} 
     onFocus={() => name==="confirmPassword" && setUnfocused(true)}  
     focused={unfocused.toString()}
   />  
+  
+
+    <label for="inputField" className="label-name ">{formFieldName}</label>
+    </>
+   
   )
 }
 

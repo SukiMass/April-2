@@ -31,6 +31,22 @@ const JobWorkSpace = () => {
                 <option value="2">Two</option>
                 <option value="3">Three</option>
               </select>
+
+              {/* <div class="dropdown customDropdown">
+                <button class="btn btn-secondary dropdown-toggle show" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">{ }</button>
+                <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1" style={{ position: ' absolute', inset: '0px auto auto 0px', margin: '0px', transform: 'translate(0px, 38px)' }} data-popper-placement="bottom-start">
+                  <li value="Set 1 - Medium"><a class="dropdown-item" href="#">Set 1 - Medium</a></li>
+                  <li value="Set 2 - Medium"><a class="dropdown-item" href="#">Set 2 - Medium</a></li>
+                  <li value="Set 3 - Medium"><a class="dropdown-item" href="#">Set 3 - Medium</a></li>
+                  <li value="Set 10 - Medium">
+                  </li>
+                </ul>
+              </div> */}
+
+
+
+
+
             </div>
           </div>
           <div className="card w-100 mt-2 rounded-4 border-0">

@@ -72,7 +72,7 @@ const DashboardNavbar = ({ dashboadMenus, profileImage, profileName }) => {
                 aria-expanded="false"
               >
                 <img
-                  src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                  src={profileImage}
                   alt="mdo"
                   width="32"
                   height="32"

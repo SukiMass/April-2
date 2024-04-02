@@ -12,7 +12,7 @@ const LearningPage = () => {
         <>
             <DashboardNavbar profileImage="https://github.com/mdo.png" profileName="George Martin" dashboadMenus={professionalPageDashboardMenu} />
 
-            <div className="learning-page-height learning-page-bg">
+            <div className="learning-page-height learning-page-bg overflow-scroll">
                 <div className="container pt-5">
                     <div className="row row-cols-1 row-cols-md-3 g-4 mt-0">
                         <div className="col">
@@ -34,7 +34,7 @@ const LearningPage = () => {
                             />
                         </div>
                         <div className="modal fade col-md-4" id="learnMore" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div className="modal-dialog modal-dialog-centered">
+                            <div className="modal-dialog modal-dialog-scrollable">
                                 <div className="modal-content">
                                     <div className="modal-header">
                                         <h5 className="modal-title" id="staticBackdropLabel">Learn More</h5>    
@@ -42,6 +42,26 @@ const LearningPage = () => {
                                     </div>
                                     <div className="modal-body">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam omnis animi at eveniet perferendis fugit voluptatum enim et. Sapiente nostrum eius velit porro accusamus culpa eligendi corrupti eveniet nulla fugiat aliquid, a quas soluta odio suscipit blanditiis officia. Assumenda ullam nihil incidunt a dolores recusandae, voluptate culpa ipsam. Minus, aspernatur!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, porro.
                                     </div>
                                 </div>
                             </div>

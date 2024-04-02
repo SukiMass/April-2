@@ -71,6 +71,7 @@ const ForgetPasswordForm = () => {
           type="email"
           className="form-control login-input border border-0 rounded-3"
           placeHolder="Email ID"
+          // placeHolder="example@gmail.com"
           ariaLabel="email"
           testId="forgot-email"
           value="applied123@gmail.com"
